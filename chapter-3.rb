@@ -114,7 +114,10 @@ puts "this is a test.gsub("i","")"
 #gsub can do multiple substitutions
 
 # Iteration with regular expressions
-# 
+"xyz".scan(/./) { |x| puts x }
+# x
+# y
+# z
 
 # ---
 
