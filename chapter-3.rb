@@ -122,3 +122,71 @@ puts "this is a test.gsub("i","")"
 # ---
 
 
+# Regular Expressions
+
+# Characters and their meaning
+# ^  Anchor for beginning of a line
+# $  Anchor for the end of a line
+# \A Anchor for the start of of a string
+# \z Anchor for the end of a string
+# .  Any character
+# \w Any letter, digit, or underscore
+# \W Anything that \w doesn't match
+# \d Any digit
+# \D Anything that \d doesn't match
+# \S Non-whitespace (any visible character)
+
+"The car costs $1000 and the cat costs $10".scan(/\d+/) do |x|
+  puts x
+end
+# 1000
+# 10
+
+"The car costs $1000 and the cat costs $10".scan(/\d/) do |x|
+  puts x
+end
+# 1
+# 0
+# 0
+# 0
+# 1
+# 0
+
+# Regular Expression Character and Sub-expression modifiers
+# *  Match zero or more occurences of the preceding character, and match as many as possible.
+# +  Match one or more occurences of the preceding character, and match as many as possible. 
+# *? Match zero or more occcurences of the preceding character, and match as few as possible.
+# +? Match one or more occurences of the preceding character, and match as few as possible. 
+# ?  Match either one or none of the preceding character. 
+# {x} Match x occurences of the preceding character. 
+# {x,y} Match at least x occurences and at most y occurences. 
+
+# Matching 
+
+# Matching is useful if you want to quickly see if there's a particular pattern in a string. You could do this:
+puts "String has vowels" if "This is a test" =~ /[aeiou]/
+# =~ is another form of an operator: a matching operator.
+
+# You could also use a built in string method called match 
+puts "String has vowels" if "This is a test".match(/[aeiou]/) 
+
+# ---
+
+# Arrays and lists 
+# After working with number and string objects, it becomes necessary to create collections of objects and work with thme as a list. In Ruby, you can represent ordered collections of objects using arrays. 
+x = [1,2,3,4]
+x[2] is 3
+
+# Elements can be accessed by their index. To access a particular element, an array (or a variable containing an array) is followed by the index contained within square brackets.
+
+# to assign a new value to an existing array:
+x[2] += 1 
+
+# Arrays act like a stack "Last in, first out"
+x = []
+x << "Word"
+x << "Fun" 
+puts x.pop
+puts x.pop
+puts x.length
+ 
