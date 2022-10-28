@@ -189,4 +189,9 @@ x << "Fun"
 puts x.pop
 puts x.pop
 puts x.length
+
+puts "This is a test".scan(/\w/).join(', ')
+T, h, i, s, i, s, a, t, e, s, t
+
+
  
