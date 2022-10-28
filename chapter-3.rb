@@ -264,6 +264,64 @@ p x.reverse
 
 # ---
 
+# Hashes
+# Arrays are collections of objects, and so are hashes. This is not proper syntax but will change when we learn about symbols.
+dictionary = { cat: "feline animal", dog: "canine animal"}
+puts dictionary.size
+
+# Here's how to access an item:
+puts dictionary[:cat]
+# feline animal
+
+# Hashes can be viewed as an array that has names for elements instead. 
+dictionary[:cat] = "fuffly animal"
+
+# Basic Hash Methods
+
+# Iterating through hash elements 
+x = {"a" => 1, "b" => 2}
+x.each { |key,value| puts "#{key} equals #{value}" }
+
+# Retrieving keys
+x = { a: 1, b: 2, c: 3 }
+p x.keys 
+
+# Deleting Hash elements 
+x = {a:1, b:2, c:3}
+x.delete(:a)
+
+# Deleting hash elements conditionally 
+x = { a:100, b: 20}
+x.delete_if { |key, value | value < 25 }
+
+# Hashes wthin Hashes
+# It's possible to hashes, or any sort of object, within hashes, and even arrays with hashes. You could create a giant tree structure with hashes and arrays.
+people = {
+  fred: {
+    name: "Fred Elliott",
+    age: 63,
+    gender: "male",
+    favorite_painters: ["Monet", "Constable", "Da Vinci"]
+  },
+  Janet: {
+    name: "Janet S Porter",
+    age: 55,
+    gender: "female"
+  },
+  Tim: {
+    name: "Tim Collins",
+    age: 31,
+    gender: "male",
+    favorite_painters: ["Hopper", "Caravaggio", "Monet"]
+  }
+}
+# How to select pieces of the hash. This is a chain of lookups
+puts people[:Tim][:age]
+
+
+
+# ---
+
 # Blocks
 # We use anonymous blocks because the majority of functions passed as a block are usually specific to your situation and not worth defining for reuse.
 
