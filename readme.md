@@ -4,11 +4,9 @@ I've been studying the book [Beginning Ruby 3: from beginner to pro](https://www
 
 Unlike past experiences when learning to program where I was advised to start a project, I'm doing the opposite and focusing on syntax. This has been by far more successful for me personally. 
 
-## My setup
-* IRB in one window
-* VSCode in the left
-* GIT for tracking progress
-* Profit.
+## My setup 
+IRB in one window | VSCode in the left | GIT for tracking progress | Profit.
+&nbsp;
 ![image](Screenshots/setup.png)
 
 ---
