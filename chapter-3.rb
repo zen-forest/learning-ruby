@@ -425,6 +425,46 @@ end
 # A case block works by processing an expression first and then by finding a contained when block that matches the result. 
 # If nmatching block is found, then the else block wthin the case block is executed instead. 
 
+# Case pattern matching
+
+# Using the case statement and pattern patching makes it easy to deconstruct complex objects and use their data. 
+response = {error: "Bad Gateway", code: 502 }
+case response
+  in {data: data, code: code }
+  puts "Success #{data}, Code: #{code}"
+  in {data: error, code: code }
+  puts "Success #{error}, Code: #{code}"
+end
+# Pattern matching can be very useful. Pattern matching works with arrays, ranges, and objects. 
+
+# We've learned this already
+1.upto(5) { |number| puts number }
+
+# It's possible to loop code in other ways. While runs based on an expression in this case while x is multiplied by two.
+x = 1
+while x < 100
+  puts x
+  x = x*2
+end
+
+x = 1
+until x > 99
+  puts x 
+  x = x*2
+end
+
+# what's the difference between while and until? 
+# while denotes that a section of code that is to be repeated over until the expression is satisfied.
+# Until denotes that a block of code runs until a certain condition is met. 
+# While loop ex: you can play video games as long as you feel like it
+# Until loop: you can play video games until you don't feel like it. 
+
+# It's possible to use both while and until in a singel line setting, as with if and unless
+# There's another way to write this:
+i = 1
+i = i*2 until i > 1000
+puts i
+
 # ---
 
 # Blocks
