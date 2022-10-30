@@ -1,16 +1,15 @@
 # Learning Ruby
 
-## Welcome!
-I've been studying the book [Beginning Ruby 3: from beginner to pro](https://www.amazon.com/Beginning-Ruby-3-Beginner-Pro/dp/1484263235)
+I've been studying the book [Beginning Ruby 3: from beginner to pro](https://www.amazon.com/Beginning-Ruby-3-Beginner-Pro/dp/1484263235) and this repo contains my notes. 
 
-My longterm goal is to have the ability to somewhat effortlessly spin up early prototypes of new ideas. I believe that being able to make ideas real and test them is immensely satisfy, fun, and powerful!
+Unlike past experiences when learning to program where I was advised to start a project, I'm doing the opposite and focusing on syntax. This has been by far more successful for me personally. 
 
-I chose Ruby because the philosophy of the language resonated with me—how could you not want to use a programming language that's friendly and optimized for ease? It also helps that there's a strong community of people who feel like-minded in some way that I can't articulate just yet. Many a person attempted to guide me to JavaScript, but it felt disorganized and idiosyncratic. 
-
-## My methodology: build strong fundamentals
-Some people learn from doing projects, I discovered that I learn best by working my way through the fundamentals. This was a thorough process, I had an iTerm window with IRB, VSCode with .rb files for each chapter, and Anki where I could add cards to quiz myself on later using the spaced repetition method. 
-
-Some might think this is over-done for just getting started, but this is how I learn best and sometimes you just need to trust your gut. As a piano player, I believe it's important to learn scales, understand theory, and when the time comes your mind has a richer foundation to draw upon. 
+## My setup
+* IRB in one window
+* VSCode in the left
+* GIT for tracking progress
+* Profit.
+![image](Screenshots/setup.png)
 
 ---
 

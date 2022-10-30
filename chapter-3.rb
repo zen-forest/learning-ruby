@@ -318,7 +318,24 @@ people = {
 # How to select pieces of the hash. This is a chain of lookups
 puts people[:Tim][:age]
 
+# Flow Control
+age = 10
+puts "I'm age 10" if age < 18
+# If and unless
+if age < 18
+  puts "You're too young to use this system"
+end
 
+# Unless is a great operator, I like it. More drastic in a way.
+age = 10
+unless age >= 18
+  puts "You're too young to use this system"
+  if age >= 18
+    puts "but you can in the UK!"
+  end
+end
+
+# if you type "exit", IRB will exit, even if it's in a method. 
 
 # ---
 
