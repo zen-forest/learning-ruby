@@ -339,6 +339,38 @@ end
 
 # ---
 
+# The Ternary Operator
+# Many Ruby programmers are unawarer of the Ternary Operator, but it makes it possible for an expression to contain a mini if/else statement. 
+# It can make your code more compact.
+age = 10
+type = age < 18 ? "child" : "adult"
+puts "You are a " + type 
+
+# WHat is an expression? 
+# An expression is a unit of code that resolves to a value. 
+
+# Consider the code below:
+name = "Tim"
+type = name == "Tim" ? "welcome home!"  : "this is not your home"
+# After the question mark, the first is option is true, the second is if it's false
+
+# This is the same as above^^
+age = 10
+type "child" if age < 18
+type = 'adult' unless age < 18
+puts "You are a" + type
+
+# And this^^
+age = 10
+if age < 18
+  type = "child"
+else
+  type = "adult"
+end
+puts "You are a " + type 
+
+# ---
+
 # Blocks
 # We use anonymous blocks because the majority of functions passed as a block are usually specific to your situation and not worth defining for reuse.
 
