@@ -6,13 +6,14 @@ Unlike past experiences when learning to program where I was advised to start a 
 
 ## My setup 
 IRB in one window | VSCode in the left | GIT for tracking progress | Profit.
-&nbsp;
+<br>
+<br>
 ![image](Screenshots/setup.png)
 
 ---
 
 ## Great resources for learning Ruby 
-* *[Beginning Ruby 3: from beginner to pro](https://www.amazon.com/Beginning-Ruby-3-Beginner-Pro/dp/1484263235)
+* [Beginning Ruby 3: from beginner to pro](https://www.amazon.com/Beginning-Ruby-3-Beginner-Pro/dp/1484263235)
 * [Learn Enough Ruby](https://news.learnenough.com/ruby-optimized-for-programmer-happiness)
 * [Well Grounded Rubyist (Ruby 2.1)](https://www.amazon.com/Well-Grounded-Rubyist-David-Black/dp/1617291692)
 
