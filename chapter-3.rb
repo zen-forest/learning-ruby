@@ -369,6 +369,62 @@ else
 end
 puts "You are a " + type 
 
+# Sometimes it's desirable to make several comparisons with the same variable at the same time. You could do with the if statement, as covered previously.
+fruit = "orange"
+color = "orange" if fruit == "orange"
+color = "green" if fruit == "apple"
+color = "yellow" if fruit == "banana"
+
+# A better way to structure this is: 
+fruit = "orange"
+
+if fruit == "orange"
+  color = "orange"
+elseif fruit == "apple"
+  color = "green"
+elseif fruit == "banana"
+  color = "yelow"
+else
+  color = "uknown"
+end
+
+# ---
+
+# Elsif & Case
+fruit = "orange"
+color = "orange" if fruit == "orange"
+color = "green" if fruit == "apple"
+color = "yellow" if fruit == "banana"
+
+# Another way to write this with elseif
+fruit = "orange"
+if fruit == "orange"
+  color = "orange"
+elsif fruit == "apple"
+  color = "green"
+elsif fruit == "banana"
+  color = "yellow"
+else
+  color = "unknown"
+end
+# Pretty straightforward conditional stuff. 
+
+# A variant of this technique is called the case block
+fruit = "orange"
+case fruit
+when "orange"
+  color = "orange"
+when "apple"
+  color = "green"
+when "banana"
+  color = "yellow"
+else
+  color = "unknown"
+end
+# This close is similar to the if block, expect that the syntax is cleaner. 
+# A case block works by processing an expression first and then by finding a contained when block that matches the result. 
+# If nmatching block is found, then the else block wthin the case block is executed instead. 
+
 # ---
 
 # Blocks
