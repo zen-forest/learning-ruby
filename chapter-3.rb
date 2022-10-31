@@ -467,6 +467,74 @@ puts i
 
 # ---
 
+# Code Blocks
+
+# The each method accepts a single following code block. 
+# The code block is defined within the {} symbols, or do and end delimiters
+x = [1,2,3]
+x.each { |y| puts y }
+
+# This is an alternate way to write this. Notice that |y| is a parameter
+x = [1,2,3]
+x.each do |y|
+  puts y
+end
+
+# You can use a short-hand such as _1 to forego defining the paramter for the block
+# This can be useful if defining the parameter has little to no value. 
+x = [1,2,3]
+x.each do
+  puts _1
+end
+
+# You can write methods of your own to handle code blocks, for example:
+def each_vowel(&code_block)
+  %w{a e i o u}.each { |vowel| code_block.call(vowel)}
+end
+each_vowel {|vowel| puts vowel}
+# a
+# e
+# i 
+# o
+# u
+# each_vowel is a method that accepts a code block thanks to &code_block
+# %w{a e i o u} is array literal, meaning it's hard coded and not assigned to variable
+# .each iterates over each vowel
+# the .call executes the code block once for each vowel, passing in the vowel variable as a paramter each time
+
+# %w{} was confusing but I found help here: https://www.zenspider.com/ruby/quickref.html#types
+# It converts %w{a e i o u} to ["a", "e","i","o","u"]
+# Fascinating
+
+# An alternative technique is to use the yield method which automatically detects any passed code block and passes to control it
+def each_vowel
+  %w{a e i o u}.each { |vowel| yield vowel }
+end
+each_vowel { |vowel| puts vowel }
+
+# What technique you use is up to you. One downside to the code above is that it's less clear what's happening
+# yield statements allow you to call any method with a block of code
+# The number of arguments passed to the block has no limitations 
+# As many times we will write the yield inside the method it will try to call block
+# To pass arguments from yield to the block we can write || inside the block as the argument
+
+def yield_example
+  puts "Here, you are in inside the method"
+  yield
+  puts "Again you fall under method block"
+  yield
+end
+yield_example {puts "This is a block of the code"}
+
+
+
+
+# ---
+
+
+
+# ---
+
 # Blocks
 # We use anonymous blocks because the majority of functions passed as a block are usually specific to your situation and not worth defining for reuse.
 
