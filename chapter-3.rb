@@ -621,12 +621,25 @@ epoch_time = Time.gm(2020,2).to_i
 
 # ---
 
+# Ranges
+# It's useful to be able to store the concept of a list, instead of it's actual contents.
+# If you wanted to represent all the letters between A and Z, you could create an array like:
+x = ['a','b','c','d','e']
+('a'..'z')
+
+('a'..'z').to_a.each { |letter| print letter}
+# Here's another way to write this since the array class has a .each method
+('A'..'Z').each { |e| print e }
+
+# You can also use a method to see if something is within a range.
+('A'..'Z').include?('R')
+# returns true
+('A'..'Z').include?('r')
+# returns false as it's not a lower case
+a = [2,4,6,8,10,12]
+p a[1..3]
 
 
-# ---
-
-# Blocks
-# We use anonymous blocks because the majority of functions passed as a block are usually specific to your situation and not worth defining for reuse.
 
 # ---
 
