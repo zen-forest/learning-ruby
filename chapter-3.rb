@@ -518,16 +518,106 @@ each_vowel { |vowel| puts vowel }
 # As many times we will write the yield inside the method it will try to call block
 # To pass arguments from yield to the block we can write || inside the block as the argument
 
-def yield_example
-  puts "Here, you are in inside the method"
-  yield
-  puts "Again you fall under method block"
-  yield
+
+# Another view on yield from this guide here 
+# https://www.rubyguides.com/2019/12/yield-keyword/
+
+#here's what you need to know
+# Calling a block runs the code inside the block 
+# Yield can pass any number of arguments to the block 
+# The block’s return value becomes the return value for yield
+
+def make_salad
+  yield "lettuce"
+  yield "carrots"
+  yield "olive oil"
+  yield "tomatoes"
 end
-yield_example {puts "This is a block of the code"}
+
+make_salad { |i| puts "Adding #{i} to salad!" }
+# or
+make_salad do
+  |i| puts "Adding #{i} to salad!"
+end
+
+
+# I'm studying this to support my learning
+# https://www.rubyguides.com/2016/02/ruby-procs-and-lambdas/
 
 
 
+# Here's another example
+
+def test
+  yield 2*3
+  yield 100
+  puts "I the method test"
+end
+
+test { |i| puts "block #{i}"}
+
+# only one code block can be passed at anyone time. It's not possible to accept two or more code blocks as parameters to a method. 
+# Code blocks may accept none, one, or more parameters themselves.
+
+# ---
+
+# Proc
+# It's possible to store code blocks within variables, using a proc
+print_parameter_to_screen = Proc.new { |x| puts x }
+print_parameter_to_screen.call(100)
+# As with accepting a code block into a method, you use the Proc object's call method to execute it
+# As well as to pass any parameters in
+
+# ---
+
+# Lambda
+# Another way to define code blocks. There are a couple differences between procs and Lambdas
+# Lambda's check if the number of parameters check the signature
+# Lambda's return just like a ruby method, while a proc returns from the current context. 
+# A proc returns from the current context. 
+
+# ---
+
+# Dates & Times
+puts Time.now
+puts Time.now - 10
+
+# One cool thing you can do is extend the Integer class to have some helpful methods
+class Integer
+  def seconds
+    self
+  end
+  def minutes
+    self * 60
+  end
+  def hours
+    self * 60 * 60
+  end 
+  def days 
+    self  * 60 * 60 * 24
+  end
+end
+
+# ---
+
+year = 2020
+month = 1
+day = 16
+hour = 12
+min = 57
+sec = 10
+msec = 24
+Time.local(year, month, day,hour, min, sec, msec)
+# This creates a Time object based on the current (local) time zone. 
+
+# Time is calculated based on the Unix time epoch 
+Time.gm(2020, 02).to_i
+# 1580515200
+# You can create different objects based on timecodes
+# Time.gm
+
+Time.gm(2020,02).to_i
+epoch_time = Time.gm(2020,2).to_i
 
 # ---
 
