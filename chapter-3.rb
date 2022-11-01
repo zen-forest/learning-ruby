@@ -639,6 +639,64 @@ x = ['a','b','c','d','e']
 a = [2,4,6,8,10,12]
 p a[1..3]
 
+# ---
+
+# Symbols!
+# Synbols are abstract references represented, typically by a short string prefixed with a colon. 
+# Examples are
+:blue, :good, :name 
+# Symbols will take time and repeated exposure to understand how they work
+# It's worth the effort! 
+
+current_situation = :good
+puts "Everything is fine" if current_situation == :good
+puts "PANIC" if current_situation == :bad
+
+# Symbols don't contain values or objects, like variables do. Instead they're used as a consistent name within code. 
+
+
+# you can do this…but
+current_situation = "good"
+puts "Everything is fine" if current_situation == "good"
+puts "PANIC" if current_situation == "bad"
+# it's not as efficient. Every mention of "good" or "bad" stores a new object in memory
+# A symbol 
+
+# I was able to grock symbols when I thought of it like this.
+# A Ruby string is an object that has a bunch of methods and properties. 
+# People like to use strings for keys, and when the string is used for a key then all those extra methods aren't used. 
+# So they made symbols, which are string objects with all the functionality removed, except that which is needed for it to be a good key.
+
+# Just think of symbols as constant strings.
+
+#Alternate example
+string1 = "Ruby"
+string2 = "Ruby"
+string1.object_id == string2.object_id
+# returns false
+
+x = 3
+y = 3
+x.object_id == y.object_id    
+# returns false
+
+sym1 = :symbol
+sym2 = :symbol
+sym1.object_id == sym2.object_id 
+# returns true
+
+# You can think of a symbol as a literal constant with no value. 
+# A symbol is useful in situations where you don't necessarily want to store an actual value, just a concept or an option
+
+# Symbols are useful when creating hashes and you want to have a distinction between keys nad values for example. 
+person1 = {name: "Fred", age:20, gender: :male }
+person2 = {name: "Laura", age:23, gender: :female }
+# Many methods provided by Ruby classes use this style to pass infomration into that method (and return values)
+# Think of symbols are less flexible, straitjacketed strings that we use as identifiers. 
+# Objects and classes are also types of data
+
+# Almost every line of code you'll write will contain an expression, an iterator, or some form of logic. 
+
 
 
 # ---
