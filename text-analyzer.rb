@@ -23,4 +23,15 @@ puts "#{total_characters} characters"
 total_characters_nospaces = text.gsub(/\s+/,'').length
 puts "#{total_characters_nospaces} characters excluding spaces"
 
+# We want to count the number of words in the text file 
+# we can:
+# 1. count the number of groups of contiguos letters using scan to create an array 
+# 2. Split the text on whitespace and count the resulting fragments using split and size
+
+# Split automatically looks at whitespace as a way to separate between words
+puts "this is a test".split.length
+# which could be problematic…so below
+# text = "First-class decisions require clear-headed thinking"
+# puts "Scan method: #{text.scan(/\w+/).length}"
+# puts "Scan method: #{text.split.length}"
 
