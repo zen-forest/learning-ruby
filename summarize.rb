@@ -24,7 +24,7 @@ puts ideal_sentences.join(".")
 "this is a text".gsub(/t/,'x')
 
 # Questions
-# What does slice do?
+# What does slice do? Slice method cuts from 
 # What does gsub do?
 # How does sort_by work?
 # WHat does select do? 
