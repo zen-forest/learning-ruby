@@ -35,6 +35,29 @@ end
 # This could would result in an error. 
 # It's important to only use local variables where they're being directly used. 
 
+# An example of two local variables with the same name and different scopes
+# def basic_method
+#   x = 50
+#   puts x
+# end
+
+# x = 10
+# basic_method
+# puts x 
+# This shows that local variables live entirely in their original scope. 
+# The x variable in the method 
+
+# Global Variables
+# Global variables are accessible from everywhere within an application, including classes and objects. 
+# You define global variables with a $. 
+def basic_method
+  puts $x
+end
+
+$x = 10
+basic_method
+# The $ and @ are known as Sigils. Cool.
+
 # ---
 
 # Classes
