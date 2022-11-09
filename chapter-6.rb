@@ -1,4 +1,25 @@
 
+# Local, Global, and Class Variables
+class Square
+  def initialize(side_length)
+    @side_length = side_length
+  end
+
+  def area
+    @side_length * @side_length
+  end
+end
+
+a = Square.new(10)
+b = Square.new(5)
+puts a.area
+puts b.area
+
+# Initialize is a special method that's called when a new object based on that class is created.
+# When Square.new(10) was called, the Square class creates a new object instance of itself and calls initialize on that object. 
+# In initialize, it accepts a single argument into side_length to a new variable with an '@'
+# The '@' symbol is an instance variable. Meaning they have scope within, and are associated with the current object.
+
 # ---
 
 # Classes
