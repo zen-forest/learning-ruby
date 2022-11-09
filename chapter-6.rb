@@ -20,6 +20,21 @@ puts b.area
 # In initialize, it accepts a single argument into side_length to a new variable with an '@'
 # The '@' symbol is an instance variable. Meaning they have scope within, and are associated with the current object.
 
+# Local variables
+x = 10
+puts x
+# It can only be used in the same place it is defined
+# If you jump to using an object's method or a separate method of your own, it doesn't come with you. 
+# It is local in *scope*. It's only present within the local area of code
+def basic_method
+  puts x
+end
+
+# x = 10
+# basic_method
+# This could would result in an error. 
+# It's important to only use local variables where they're being directly used. 
+
 # ---
 
 # Classes
