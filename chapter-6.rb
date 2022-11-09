@@ -58,6 +58,34 @@ $x = 10
 basic_method
 # The $ and @ are known as Sigils. Cool.
 
+# Instance and object variables
+# Refer to square example above
+# Instance variables are prefixed with an @ symbol
+# It is accessible from any other method inside that object 
+
+# Class variables 
+# The scope of a class variable is within the class itself, as opposed to within specific objects of that class. 
+# Class variables start with two @@ symbols as opposed to the single @symbol
+class Square2
+  def initialize
+    if defined?(@@number_of_squares)
+      @@number_of_squares += 1
+    else
+      @@number_of_squares = 1
+    end
+  end
+
+  def self.count
+    @@number_of_squares
+  end
+end
+
+c = Square2.new
+b = Square2.new
+puts Square2.count 
+# Class variables are useful for storing information relevant to all objects of a certain class. 
+# I'm not sure how useful this will be, but I have more to learn.
+
 # ---
 
 # Classes
