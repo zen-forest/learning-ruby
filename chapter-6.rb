@@ -86,6 +86,45 @@ puts Square2.count
 # Class variables are useful for storing information relevant to all objects of a certain class. 
 # I'm not sure how useful this will be, but I have more to learn.
 
+## Class Methods vs. Instance Methods 
+# Instance Methods relate to, and operate directly on, an instance of an object. 
+# Instance methods are methods that become avialable when an object is instantiated based on a class. 
+class Square3 
+  def self.test_method
+    puts "Hello from square3 class!"
+  end
+  def test_method
+    puts "Hello from an instance of class Square3!"
+  end
+end 
+
+Square3.test_method
+Square3.new.test_method
+# Adding the self. prefix makes this method a class method 
+# Any method defined without a prefix is an instance method 
+# Class objects can be used for things such as the "object counter" using the @@ symbol (or class variable)
+
+class Square4
+  def initialize
+    if defined?(@@number_of_squares)
+      @@number_of_squares += 1
+  else
+    @@number_of_squares = 1
+  end
+end
+  def self.count
+    @@number_of_squares
+  end
+end
+# Consider if as if you're asking the class to do something that's relevant ot the class as a whole, rather than asking the objects. 
+
+d = Square4.new
+puts Square4.count
+e = Square4.new
+puts Square4.count
+f = Square4.new
+puts Square4.count
+
 # ---
 
 # Classes
