@@ -125,6 +125,46 @@ puts Square4.count
 f = Square4.new
 puts Square4.count
 
+# Inheritance 
+# Inheritance allows you to generate a taxonomy of classes and objects
+class ParentClass
+  def method1
+    puts "hello from method1 in the parent class"
+  end
+  def method2
+    puts "Hello from method 2 in the parent class"
+  end
+end
+
+class ChildClass < ParentClass
+  def method2
+    puts "Hello from method2 in the child class"
+  end
+end
+
+my_object = ChildClass.new
+my_object.method1
+my_object.method2
+# method2 in the ChildClass overrides the class from ParentClass
+
+class Person
+  def initialize(name)
+    @name = name
+  end
+  def name
+    @name
+  end
+end
+
+class Doctor < Person 
+  def name
+    "Dr. " + super
+  end
+end
+
+p = Person.new("Bill")
+puts p.name
+
 # ---
 
 # Classes
