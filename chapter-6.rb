@@ -189,6 +189,8 @@ puts "This is a test".length
 puts "a".length
 puts "A really long line of text".length
 
+# ---
+
 # Some libraries and extensions to Ruby override the methods supplied by the core classes to 
 # extend the functionality of Ruby in general. 
 # tread with caution 
@@ -199,6 +201,47 @@ class Dog
     puts "Woof!"
   end
 end
+
+my_dog = Dog.new
+my_dog.talk
+
+class Dog
+  def talk
+    puts "Howl!"
+  end
+end
+my_dog.talk
+
+# Reflection and Discovering an Object's Methods 
+# Reflection is the process by which a computer program can inspect, analyze, and modify itself while it's running
+# and being used 
+a = "This is a test"
+# puts a.methods.join()
+
+# The methods method on any object (unless it has been overridden) returns an array of methods 
+# made available by that object. 
+
+# The results reveal some other reflective methods too. For example, protected_methods, 
+# private_methods, and public_methods all reveal methods encampsulated in different ways 
+
+# ---
+
+# Another interesting method is instance_variables It returns the names of any object variables associated with an instance
+class Person2
+  attr_accessor :name, :age
+end
+
+p = Person2.new
+p.name = "Fred"
+p.age = 20
+puts p.instance_variables
+
+# ---
+
+# Encapsulation 
+# Encapsulation describes teh way in which data and methods can be bundled together into obojects
+# that operate as a single unit. Encapsulation keeps functionality hidden inside your classes and allows you to control how
+# the outside world manipulates your objects. 
 
 # ---
 
