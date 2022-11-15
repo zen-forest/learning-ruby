@@ -317,6 +317,33 @@ end
 puts 1000.to_s
 puts [1,2,3].to_s
 puts ({name: "Fred", age: 10}).to_s
+# In other words, polymorphism is a way to abstract out elements of similar classes in a way where those base elements that can affect multiple different types of classes
+# can live within the higher-level class. 
+
+# Nested Classes
+# They are useful when a class depends on other classes, but those classes aren't necessarily useful anywhere else. 
+# It's useful when you want to seaprate classes into groups of classes instead of when you want to keep them distinct.
+class Drawing
+  def self.give_me_a_circle
+    Circle.new
+  end
+
+  class Line
+  end
+
+  class Circle
+    def what_am_i
+      "This is a circle"
+    end
+  end
+end
+
+x = Drawing.give_me_a_circle
+puts x.what_am_i
+y = Drawing::Circle.new
+puts y.what_am_i
+z = Circle.new
+puts z.what_am_i
 
 # ---
 
