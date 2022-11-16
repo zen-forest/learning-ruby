@@ -338,12 +338,38 @@ class Drawing
   end
 end
 
+# Calls the .give_me_a_circle method which returns a new instance of Drawing::Circle
 x = Drawing.give_me_a_circle
 puts x.what_am_i
+
+
 y = Drawing::Circle.new
 puts y.what_am_i
-z = Circle.new
-puts z.what_am_i
+
+# This does not work because Circle doesn't exist. 
+# z = Circle.new
+# puts z.what_am_i
+
+
+class Bicycle
+  def self.give_me_a_bike
+    Mtb.new
+  end
+
+  class Mtb 
+    puts "I'm an off road bicycle"
+  end
+
+  class Roadbike
+    def what_am_i
+      puts "I'm a road bike"
+    end
+  end
+end
+
+a = Bicycle::Roadbike.new
+puts a.what_am_i
+
 
 # ---
 
