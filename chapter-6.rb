@@ -371,6 +371,30 @@ a = Bicycle::Roadbike.new
 puts a.what_am_i
 
 
+# The scope of constants 
+def circumference_of_circle(radius)
+  2 * Pi * radius
+end
+
+Pi = 3.141592
+# puts circumference_of_circle(10)
+
+class OtherPlanet
+  Pi = 5.6
+  def self.circumference_of_circle(radius)
+    radius * 2 * Pi
+  end
+end
+
+puts OtherPlanet.circumference_of_circle(10)
+puts OtherPlanet::Pi
+
+# This example demonstrates that constants have scope within the context of classes. 
+# The OtherPlanet class has it's own definition of Pi. 
+# If you hadn't redefined the original Pi would have been avialable to Other Planet
+
+
+
 # ---
 
 # Encapsulation 
