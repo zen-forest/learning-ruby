@@ -1,4 +1,6 @@
 
+# Chapter 6
+
 # Local, Global, and Class Variables
 class Square
   def initialize(side_length)
@@ -393,6 +395,14 @@ puts OtherPlanet::Pi
 # The OtherPlanet class has it's own definition of Pi. 
 # If you hadn't redefined the original Pi would have been avialable to Other Planet
 
+# Modules, Namespaces, and Mix-ins
+# Modules provide a structure to collect ruby classes, methods, and constants into a single, separately named and defined unit. 
+# This is useful to avoid clashes with exsting classes, methods, and constants, and also so that you can add (mix-in) the functionality 
+# of modules into your classes
+
+# First we'll take a look at how to use modules to create namespaces to avoid name-related clashes
+
+# Namespaces
 
 
 # ---
