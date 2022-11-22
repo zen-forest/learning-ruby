@@ -447,6 +447,24 @@ b.name = "Genhis Khan from Moskau"
 
 # Rather than having Ruler and Coutry battling it out over Ruler, they are kept separately. 
 
+# Mix-ins
+# Ruby doesn't support multiple inheritances 
+# Instead Ruby's inheritance functionality only lets you create simple trees of classes
+
+# modules act as bundles of methods, classes, and constants that can be included into other classes. 
+module UsefulFeatures
+  def class_name
+    self.class.to_s
+  end
+end
+
+class Subfeature
+  include UsefulFeatures
+end
+
+t = Subfeature.new
+puts t.class_name
+
 # ---
 
 # Encapsulation 
