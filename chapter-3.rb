@@ -174,30 +174,7 @@ puts "String has vowels" if "This is a test".match(/[aeiou]/)
 
 # Arrays and lists 
 # After working with number and string objects, it becomes necessary to create collections of objects and work with thme as a list. In Ruby, you can represent ordered collections of objects using arrays. 
-x = [1,2,3,4]
-x[2] is 3
-
-# Elements can be accessed by their index. To access a particular element, an array (or a variable containing an array) is followed by the index contained within square brackets.
-
-# to assign a new value to an existing array:
-x[2] += 1 
-
-# Arrays act like a stack "Last in, first out"
-x = []
-x << "Word"
-x << "Fun" 
-puts x.pop
-puts x.pop
-puts x.length
-
-puts "This is a test".scan(/\w/).join(', ')
-T, h, i, s, i, s, a, t, e, s, t
-
-# Array Iteration
-# Iterating through arrays is simple and uses the each method. 
-[1, "test",2,3,4].each { |element| puts element.to_s + "x"}
-# 1x
-# testx
+x = [1tx
 # 2x
 # 3x
 # 4x 
@@ -261,7 +238,30 @@ puts x.last
 # Reversing the order of the array's element 
 x = [1,2,3]
 p x.reverse
+,2,3,4]
+x[2] is 3
 
+# Elements can be accessed by their index. To access a particular element, an array (or a variable containing an array) is followed by the index contained within square brackets.
+
+# to assign a new value to an existing array:
+x[2] += 1 
+
+# Arrays act like a stack "Last in, first out"
+x = []
+x << "Word"
+x << "Fun" 
+puts x.pop
+puts x.pop
+puts x.length
+
+puts "This is a test".scan(/\w/).join(', ')
+T, h, i, s, i, s, a, t, e, s, t
+
+# Array Iteration
+# Iterating through arrays is simple and uses the each method. 
+[1, "test",2,3,4].each { |element| puts element.to_s + "x"}
+# 1x
+# tes
 # ---
 
 # Hashes
